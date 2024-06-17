@@ -1,0 +1,49 @@
+﻿@page "/twist"
+@using BlazorApp3
+
+<h3>Điều Khiển Qua Cmd_vel</h3>
+
+<div>
+    <button @onclick="Connect">Kết Nối</button>
+    <button @onclick="MoveForward">Đi Tiến</button>
+    <button @onclick="MoveBackward">Đi Lùi</button>
+    <button @onclick="TurnLeft">Rẽ Trái</button>
+    <button @onclick="TurnRight">Rẽ Phải</button>
+</div>
+
+<p>@statusMessage</p>
+
+@code {
+    private TwistComponent twistComponent = new TwistComponent();
+    private string statusMessage = string.Empty;
+
+    private async Task Connect()
+    {
+        await twistComponent.Connect();
+        statusMessage = twistComponent.StatusMessage;
+    }
+
+    private async Task MoveForward()
+    {
+        await twistComponent.MoveForward();
+        statusMessage = twistComponent.StatusMessage;
+    }
+
+    private async Task MoveBackward()
+    {
+        await twistComponent.MoveBackward();
+        statusMessage = twistComponent.StatusMessage;
+    }
+
+    private async Task TurnLeft()
+    {
+        await twistComponent.TurnLeft();
+        statusMessage = twistComponent.StatusMessage;
+    }
+
+    private async Task TurnRight()
+    {
+        await twistComponent.TurnRight();
+        statusMessage = twistComponent.StatusMessage;
+    }
+}
