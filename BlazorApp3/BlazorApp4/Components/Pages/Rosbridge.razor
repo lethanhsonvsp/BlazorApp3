@@ -1,0 +1,74 @@
+﻿@page "/rosbridge"
+@using BlazorApp4.Services
+@inject RosbridgeService RosbridgeService
+
+<h3>Kết nối ROSBridge</h3>
+
+<form>
+    <div>
+        <label for="webSocketUri">WebSocket URI:</label>
+        <input id="webSocketUri" name="webSocketUri" @bind="webSocketUri" />
+    </div>
+    <button @onclick="ConnectToRosbridge">Kết nối</button>
+    <button @onclick="SendMessage">Gửi tin nhắn</button>
+    <button @onclick="ReceiveMessage">Nhận tin nhắn</button>
+    <button @onclick="Disconnect">Ngắt kết nối</button>
+</form>
+
+<p>@message</p>
+
+@code {
+    private string webSocketUri = "ws://192.168.137.46:9090";
+    private string? message;
+
+    private async Task ConnectToRosbridge()
+    {
+        try
+        {
+            await RosbridgeService.ConnectAsync(webSocketUri);
+            message = "Đã kết nối đến ROSBridge";
+        }
+        catch (Exception ex)
+        {
+            message = $"Không thể kết nối: {ex.Message}";
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        try
+        {
+            await RosbridgeService.SendMessageAsync("{\"op\": \"advertise\", \"topic\": \"/chat\", \"type\": \"std_msgs/String\"}");
+            message = "Đã gửi tin nhắn";
+        }
+        catch (Exception ex)
+        {
+            message = $"Không thể gửi tin nhắn: {ex.Message}";
+        }
+    }
+
+    private async Task ReceiveMessage()
+    {
+        try
+        {
+            message = await RosbridgeService.ReceiveMessageAsync();
+        }
+        catch (Exception ex)
+        {
+            message = $"Không thể nhận tin nhắn: {ex.Message}";
+        }
+    }
+
+    private async Task Disconnect()
+    {
+        try
+        {
+            await RosbridgeService.DisconnectAsync();
+            message = "Đã ngắt kết nối từ ROSBridge";
+        }
+        catch (Exception ex)
+        {
+            message = $"Không thể ngắt kết nối: {ex.Message}";
+        }
+    }
+}

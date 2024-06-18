@@ -1,49 +1,106 @@
-﻿@page "/twist"
-@using BlazorApp3
+﻿@page "/"
+@using WebSocketSharp
+@inject IJSRuntime JS
 
-<h3>Điều Khiển Qua Cmd_vel</h3>
+<h3>ROS2 WebSocket Client</h3>
 
-<div>
-    <button @onclick="Connect">Kết Nối</button>
-    <button @onclick="MoveForward">Đi Tiến</button>
-    <button @onclick="MoveBackward">Đi Lùi</button>
-    <button @onclick="TurnLeft">Rẽ Trái</button>
-    <button @onclick="TurnRight">Rẽ Phải</button>
-</div>
+<button @onclick="ConnectWebSocket">Connect to ROS Bridge</button>
+<button @onclick="SendForwardCommand">Move Forward</button>
+<button @onclick="SendBackwardCommand">Move Backward</button>
+<button @onclick="SendStopCommand">Stop</button>
 
 <p>@statusMessage</p>
 
 @code {
-    private TwistComponent twistComponent = new TwistComponent();
-    private string statusMessage = string.Empty;
+    private string statusMessage = "Disconnected";
+    private WebSocket? ws;
 
-    private async Task Connect()
+    private void ConnectWebSocket()
     {
-        await twistComponent.Connect();
-        statusMessage = twistComponent.StatusMessage;
+        string wsUrl = "ws://192.168.137.46:9090";
+        ws = new WebSocket(wsUrl);
+
+        ws.OnOpen += (sender, e) =>
+        {
+            statusMessage = "Connected to ROS Bridge server";
+            InvokeAsync(StateHasChanged);
+        };
+
+        ws.OnMessage += (sender, e) =>
+        {
+            statusMessage = "Received message: " + e.Data;
+            InvokeAsync(StateHasChanged);
+        };
+
+        ws.OnError += (sender, e) =>
+        {
+            statusMessage = "Error: " + e.Message;
+            InvokeAsync(StateHasChanged);
+        };
+
+        ws.OnClose += (sender, e) =>
+        {
+            statusMessage = "Connection closed";
+            InvokeAsync(StateHasChanged);
+        };
+
+        ws.Connect();
     }
 
-    private async Task MoveForward()
+    private void SendForwardCommand()
     {
-        await twistComponent.MoveForward();
-        statusMessage = twistComponent.StatusMessage;
+        if (ws != null && ws.IsAlive)
+        {
+            var twistMessage = new
+            {
+                op = "publish",
+                topic = "/turtle1/cmd_vel",
+                msg = new
+                {
+                    linear = new { x = 1.0, y = 0.0, z = 0.0 },
+                    angular = new { x = 0.0, y = 0.0, z = 0.0 }
+                }
+            };
+            string message = System.Text.Json.JsonSerializer.Serialize(twistMessage);
+            ws.Send(message);
+        }
     }
 
-    private async Task MoveBackward()
+    private void SendBackwardCommand()
     {
-        await twistComponent.MoveBackward();
-        statusMessage = twistComponent.StatusMessage;
+        if (ws != null && ws.IsAlive)
+        {
+            var twistMessage = new
+            {
+                op = "publish",
+                topic = "/cmd_vel",
+                msg = new
+                {
+                    linear = new { x = -1.0, y = 0.0, z = 0.0 },
+                    angular = new { x = 0.0, y = 0.0, z = 0.0 }
+                }
+            };
+            string message = System.Text.Json.JsonSerializer.Serialize(twistMessage);
+            ws.Send(message);
+        }
     }
 
-    private async Task TurnLeft()
+    private void SendStopCommand()
     {
-        await twistComponent.TurnLeft();
-        statusMessage = twistComponent.StatusMessage;
-    }
-
-    private async Task TurnRight()
-    {
-        await twistComponent.TurnRight();
-        statusMessage = twistComponent.StatusMessage;
+        if (ws != null && ws.IsAlive)
+        {
+            var twistMessage = new
+            {
+                op = "publish",
+                topic = "/cmd_vel",
+                msg = new
+                {
+                    linear = new { x = 0.0, y = 0.0, z = 0.0 },
+                    angular = new { x = 0.0, y = 0.0, z = 0.0 }
+                }
+            };
+            string message = System.Text.Json.JsonSerializer.Serialize(twistMessage);
+            ws.Send(message);
+        }
     }
 }

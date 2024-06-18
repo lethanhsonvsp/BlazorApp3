@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {}
+    "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {
+    "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
+        "projectUniqueName": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
         "projectName": "BlazorApp3",
-        "projectPath": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
+        "projectPath": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
         "packagesPath": "C:\\Users\\letha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\",
+        "outputPath": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\letha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,25 +46,29 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "JSconsoleExtensionsLib": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )",
+              "version": "[8.0.6, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )",
+              "version": "[8.0.6, )",
               "autoReferenced": true
             },
             "RosbridgeNet.RosbridgeClient.Common": {
@@ -74,6 +78,10 @@
             "RosbridgeNet.RosbridgeClient.ProtocolV2": {
               "target": "Package",
               "version": "[1.2.0, )"
+            },
+            "WebSocketSharp-netstandard": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [
@@ -90,7 +98,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.5, 8.0.5]"
+              "version": "[8.0.6, 8.0.6]"
             }
           ],
           "frameworkReferences": {
@@ -98,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

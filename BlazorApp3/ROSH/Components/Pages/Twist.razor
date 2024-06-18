@@ -1,0 +1,44 @@
+﻿@page "/t"
+@using ROSH
+@inject IJSRuntime JS
+@inject WebSocketService WebSocketService
+
+<h3>ROS2 WebSocket Client</h3>
+
+<button @onclick="ConnectWebSocket">Connect to ROS Bridge</button>
+<button @onclick="@(e => SendCommand("forward"))">Move Forward</button>
+<button @onclick="@(e => SendCommand("backward"))">Move Backward</button>
+<button @onclick="@(e => SendCommand("stop"))">Stop</button>
+
+<p>@statusMessage</p>
+
+@code {
+    private string statusMessage = "Disconnected";
+
+    private async Task ConnectWebSocket()
+    {
+        await WebSocketService.ConnectAsync();
+        statusMessage = WebSocketService.MessageDispatcher != null ? "Connected to ROS Bridge server" : "Failed to connect to ROS Bridge server";
+        StateHasChanged();
+    }
+
+    private async Task SendCommand(string command)
+    {
+        if (WebSocketService.MessageDispatcher != null)
+        {
+            var twistMessage = GetTwistMessage(command);
+            await WebSocketService.SendMessageAsync(twistMessage);
+        }
+    }
+
+    private TwistMessage GetTwistMessage(string command)
+    {
+        return command switch
+        {
+            "forward" => new TwistMessage { linear = new Vector { x = 1.0f, y = 0.0f, z = 0.0f }, angular = new Vector { x = 0.0f, y = 0.0f, z = 0.0f } },
+            "backward" => new TwistMessage { linear = new Vector { x = -1.0f, y = 0.0f, z = 0.0f }, angular = new Vector { x = 0.0f, y = 0.0f, z = 0.0f } },
+            "stop" => new TwistMessage { linear = new Vector { x = 0.0f, y = 0.0f, z = 0.0f }, angular = new Vector { x = 0.0f, y = 0.0f, z = 0.0f } },
+            _ => throw new ArgumentException("Invalid command")
+        };
+    }
+}
