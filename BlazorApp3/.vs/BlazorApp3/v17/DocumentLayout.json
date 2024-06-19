@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\letha\\source\\repos\\blazorapp3\\blazorapp3\\blazorapp1\\components\\pages\\t.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\t.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{95329F82-C8FD-4536-909B-D791D8876CFA}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\letha\\source\\repos\\blazorapp3\\blazorapp3\\blazorapp2\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95329F82-C8FD-4536-909B-D791D8876CFA}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\letha\\source\\repos\\blazorapp3\\blazorapp3\\blazorapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95329F82-C8FD-4536-909B-D791D8876CFA}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\letha\\source\\repos\\blazorapp3\\blazorapp3\\blazorapp2\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95329F82-C8FD-4536-909B-D791D8876CFA}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\letha\\source\\repos\\blazorapp3\\blazorapp3\\blazorapp1\\rosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\rosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95329F82-C8FD-4536-909B-D791D8876CFA}|BlazorApp2\\BlazorApp2.csproj|c:\\users\\letha\\source\\repos\\blazorapp3\\blazorapp3\\blazorapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95329F82-C8FD-4536-909B-D791D8876CFA}|BlazorApp2\\BlazorApp2.csproj|solutionrelative:blazorapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +27,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ROSService.cs",
-              "DocumentMoniker": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp1\\ROSService.cs",
-              "RelativeDocumentMoniker": "BlazorApp1\\ROSService.cs",
-              "ToolTip": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp1\\ROSService.cs",
-              "RelativeToolTip": "BlazorApp1\\ROSService.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAmwBgAAAAnAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp2\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorApp2\\Program.cs",
+              "ToolTip": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp2\\Program.cs",
+              "RelativeToolTip": "BlazorApp2\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T06:21:45.78Z",
+              "WhenOpened": "2024-06-19T09:34:20.716Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp1\\Program.cs",
-              "RelativeDocumentMoniker": "BlazorApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp1\\Program.cs",
-              "RelativeToolTip": "BlazorApp1\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T06:22:54.83Z",
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp2\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorApp2\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp2\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BlazorApp2\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-19T09:33:27.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "T.razor",
-              "DocumentMoniker": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp1\\Components\\Pages\\T.razor",
-              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\T.razor",
-              "ToolTip": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp1\\Components\\Pages\\T.razor",
-              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\T.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAHAAAA",
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp2\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "BlazorApp2\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\letha\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp2\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "BlazorApp2\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T06:21:19.435Z",
+              "WhenOpened": "2024-06-19T09:32:45.142Z",
               "EditorCaption": ""
             }
           ]
