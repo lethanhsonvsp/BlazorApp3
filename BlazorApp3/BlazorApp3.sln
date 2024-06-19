@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ROSH", "ROSH\ROSH.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp3", "BlazorApp3\BlazorApp3.csproj", "{91C64948-ECD5-4933-AF38-4913790C7179}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp4", "BlazorApp4\BlazorApp4.csproj", "{84E1F8A5-FC1D-4023-8625-7D71B35F3EF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp4", "BlazorApp4\BlazorApp4.csproj", "{84E1F8A5-FC1D-4023-8625-7D71B35F3EF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{09A909FB-B286-4E09-A492-CDB3332B6B3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{09A909FB-B286-4E09-A492-CDB3332B6B3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{09A909FB-B286-4E09-A492-CDB3332B6B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09A909FB-B286-4E09-A492-CDB3332B6B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09A909FB-B286-4E09-A492-CDB3332B6B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA0512A-18C5-4F8F-A799-8F8FF4EFC3F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
